@@ -18,7 +18,7 @@ import NotFound from './components/views/NotFound/NotFound';
 
 import parseTrips from './utils/parseTrips';
 import {setMultipleStates} from './redux/globalRedux';
-//import styles from './App.scss';
+import styles from './App.scss';
 
 class App extends React.Component {
   static propTypes = {
@@ -47,7 +47,7 @@ class App extends React.Component {
             atEnter={{ opacity: 0 }}
             atLeave={{ opacity: 1 }}
             atActive={{ opacity: 1 }}
-            //className={{ styles.switchWrapper }}
+            className={ styles.switchWrapper }
             location={location}
           >
             <Route exact path='/' component={Home} />
