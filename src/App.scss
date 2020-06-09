@@ -1,3 +1,17 @@
+@keyframes switch_animation {
+  from {transform: translateY(+200px);}
+  to {transform: translateY(0);}
+}
+
 .switchWrapper {
-    //tutaj animacja tego switchWrappera
+  position: relative;
+  animation-name: switch_animation;
+  animation-duration: 1s;
+
+  > :first-child ~ * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
+}
