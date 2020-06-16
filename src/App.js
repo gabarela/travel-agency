@@ -41,22 +41,16 @@ class App extends React.Component {
 
   render(){
 
-    function mapStyles(styles) {
-      return {
-        opacity: styles.opacity,
-        transform: `translateY(${styles.translateY})`,
-      };
-    }
     return (
       <BrowserRouter>
         <MainLayout>
           <AnimatedSwitch
-            atEnter={{ opacity: 1, translateY: -200}}
-            atLeave={{ opacity: 0, translateY: 0}}
-            atActive={{ opacity: 1, translateY: 0}}
+            atEnter={{ opacity: 0, marginTop: 200 }}
+            atLeave={{ opacity: 0, marginTop: 0 }}
+            atActive={{ opacity: 1, marginTop: 0 }}
             className={ styles.switchWrapper }
             location={location}
-            mapStyles={mapStyles}
+            
           >
             <Route exact path='/' component={Home} />
             <Route exact path='/trips' component={Trips} /> 
